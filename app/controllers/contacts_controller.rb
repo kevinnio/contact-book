@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :load_contacts, only: :index
-  before_action :load_contact, only: [:edit, :update]
+  before_action :load_contact, only: %w[edit update destroy]
 
   def index; end
 
@@ -16,6 +16,10 @@ class ContactsController < ApplicationController
 
   def update
     @contact.update(contact_params)
+  end
+
+  def destroy
+    @contact.delete
   end
 
   protected

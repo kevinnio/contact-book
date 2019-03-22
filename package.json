@@ -2,8 +2,11 @@
   "name": "contact-book",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "@rails/webpacker": "^4.0.2",
-    "bulma": "^0.7.4"
+    "bulma": "^0.7.4",
+    "rails-ujs": "^5.2.2-1",
+    "turbolinks": "^5.2.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.2.1"
