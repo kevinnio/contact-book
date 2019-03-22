@@ -1,20 +1,26 @@
+<% if @contact.errors.any? %>
+  <% @contact.errors.full_messages.each do |msg| %>
+    <%= render partial: 'message', locals: { message: msg, classes: 'is-danger' } %>
+  <% end %>
+<% end %>
+
 <%= form_for contact do |f| %>
   <div class="field">
-    <label class="label">First name</label>
+    <label class="label">First name *</label>
     <div class="control">
       <%= f.text_field :firstname, class: 'input', placeholder: 'First name' %>
     </div>
   </div>
 
   <div class="field">
-    <label class="label">Last name</label>
+    <label class="label">Last name *</label>
     <div class="control">
       <%= f.text_field :lastname, class: 'input', placeholder: 'Last name' %>
     </div>
   </div>
 
   <div class="field">
-    <label class="label">Telephone number</label>
+    <label class="label">Telephone number *</label>
     <div class="control">
       <%= f.text_field :telephone, class: 'input', placeholder: 'Telephone number' %>
     </div>

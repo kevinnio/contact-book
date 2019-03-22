@@ -9,10 +9,12 @@
           <span class="icon"><i class="fa fa-phone"></i></span>
           <span><%= contact.telephone %></span>
         </p>
-        <p>
-          <span class="icon"><i class="fa fa-home"></i></span>
-          <span><%= contact.address %></span>
-        </p>
+        <% if contact.address.present? %>
+          <p>
+            <span class="icon"><i class="fa fa-home"></i></span>
+            <span><%= contact.address %></span>
+          </p>
+        <% end %>
       </div>
       <nav class="level is-mobile">
         <div class="level-left">
