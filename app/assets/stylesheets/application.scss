@@ -1,3 +1,9 @@
+$base-spacing: 1em;
+
 body, html {
-  padding-top: 1em;
+  padding-top: $base-spacing;
+}
+
+.links.panel {
+  margin-top: $base-spacing;
 }

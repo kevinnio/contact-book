@@ -20,5 +20,13 @@
 
       <%= yield %>
     </main>
+
+    <footer class="footer">
+      <section class="content has-text-centered">
+        <% if user_signed_in? %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        <% end %>
+      </section>
+    </footer>
   </body>
 </html>
