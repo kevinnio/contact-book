@@ -1,0 +1,35 @@
+<h1 class="title is-1">Add new contact</h1>
+
+<%= form_for @contact do |f| %>
+  <div class="field">
+    <label class="label">First name</label>
+    <div class="control">
+      <%= f.text_field :firstname, class: 'input', placeholder: 'First name' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Last name</label>
+    <div class="control">
+      <%= f.text_field :lastname, class: 'input', placeholder: 'Last name' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Telephone number</label>
+    <div class="control">
+      <%= f.text_field :telephone, class: 'input', placeholder: 'Telephone number' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Address</label>
+    <div class="control">
+      <%= f.text_field :address, class: 'input', placeholder: 'Address' %>
+    </div>
+  </div>
+
+  <div class="field">
+    <button class="button is-link" type="submit">Save</button>
+  </div>
+<% end %>

@@ -1,6 +1,9 @@
-<h1>Contact list</h1>
+<h1 class="title is-1">Contact list</h1>
 
 <div class="panel">
+  <div class="panel-block">
+    <%= link_to 'Add new contact', new_contact_path, class: 'button is-primary' %>
+  </div>
   <% @contacts.each do |contact| %>
     <div class="panel-block">
       <h5><%= contact.fullname %></h5>
