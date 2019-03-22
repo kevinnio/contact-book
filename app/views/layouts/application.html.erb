@@ -10,6 +10,22 @@
 
   <body>
     <main class="content container">
+      <% if msg = notice %>
+        <div class="message is-primary">
+          <div class="message-body">
+            <%= msg %>
+          </div>
+        </div>
+      <% end %>
+
+      <% if msg = alert %>
+        <div class="message is-danger">
+          <div class="message-body">
+            <%= msg %>
+          </div>
+        </div>
+      <% end %>
+
       <%= yield %>
     </main>
   </body>
