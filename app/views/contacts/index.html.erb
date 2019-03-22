@@ -1,1 +1,9 @@
-<h1>Hello, Contacts</h1>
+<h1>Contact list</h1>
+
+<div class="panel">
+  <% @contacts.each do |contact| %>
+    <div class="panel-block">
+      <h5><%= contact.fullname %></h5>
+    </div>
+  <% end %>
+</div>
