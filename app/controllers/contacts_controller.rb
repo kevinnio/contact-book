@@ -1,8 +1,9 @@
 class ContactsController < ApplicationController
-  before_action :load_contacts, only: :index
   before_action :load_contact, only: %w[edit update destroy]
 
-  def index; end
+  def index
+    @contacts = current_user.contacts.order(:firstname, :lastname)
+  end
 
   def new
     @contact = Contact.new
@@ -38,16 +39,13 @@ class ContactsController < ApplicationController
 
   protected
 
-  def load_contacts
-    @contacts = current_user.contacts.order(:firstname, :lastname)
-  end
-
   def load_contact
     @contact = current_user.contacts.find(params[:id])
   end
 
   def contact_params
     params.require(:contact).permit(
+      :picture,
       :firstname,
       :lastname,
       :telephone,

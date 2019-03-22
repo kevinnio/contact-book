@@ -6,6 +6,13 @@
 
 <%= form_for contact do |f| %>
   <div class="field">
+    <label class="label">Picture *</label>
+    <div class="control">
+      <%= f.file_field :picture, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
     <label class="label">First name *</label>
     <div class="control">
       <%= f.text_field :firstname, class: 'input', placeholder: 'First name' %>

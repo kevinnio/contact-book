@@ -1,19 +1,22 @@
 <div class="box">
   <article class="media">
+    <div class="media-left">
+      <figure class="image is-96x96">
+        <%= image_tag contact.picture %>
+      </figure>
+    </div>
     <div class="media-content">
       <div class="content">
-        <p>
-          <strong><%= contact.fullname %></strong>
-        </p>
-        <p>
+        <p><strong><%= contact.fullname %></strong></p>
+        <div>
           <span class="icon"><i class="fa fa-phone"></i></span>
           <span><%= contact.telephone %></span>
-        </p>
+        </div>
         <% if contact.address.present? %>
-          <p>
+          <div>
             <span class="icon"><i class="fa fa-home"></i></span>
             <span><%= contact.address %></span>
-          </p>
+          </div>
         <% end %>
       </div>
       <nav class="level is-mobile">
