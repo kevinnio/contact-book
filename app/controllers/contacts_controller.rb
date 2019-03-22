@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.create!(contact_params)
+    @contact = current_user.contacts.create!(contact_params)
   end
 
   def edit; end
@@ -25,11 +25,11 @@ class ContactsController < ApplicationController
   protected
 
   def load_contacts
-    @contacts = Contact.order(:firstname, :lastname)
+    @contacts = current_user.contacts.order(:firstname, :lastname)
   end
 
   def load_contact
-    @contact = Contact.find(params[:id])
+    @contact = current_user.contacts.find(params[:id])
   end
 
   def contact_params
