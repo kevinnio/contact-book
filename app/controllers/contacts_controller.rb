@@ -10,16 +10,22 @@ class ContactsController < ApplicationController
 
   def create
     @contact = current_user.contacts.create!(contact_params)
+    flash[:notice] = "#{@contact.fullname} was saved."
+    redirect_to contacts_path
   end
 
   def edit; end
 
   def update
     @contact.update(contact_params)
+    flash[:notice] = "#{@contact.fullname} was updated."
+    redirect_to contacts_path
   end
 
   def destroy
     @contact.delete
+    flash[:notice] = "#{@contact.fullname} was deleted."
+    redirect_to contacts_path
   end
 
   protected
