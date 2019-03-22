@@ -4,6 +4,10 @@
   <%= link_to 'Add new contact', new_contact_path, class: 'button is-primary' %>
 </p>
 
-<% @contacts.each do |contact| %>
-  <%= render partial: 'contact', locals: { contact: contact } %>
+<% if @contacts.empty? %>
+  <%= render partial: 'message', locals: { message: 'No contacts saved yet.', classes: 'is-success' } %>
+<% else %>
+  <% @contacts.each do |contact| %>
+    <%= render partial: 'contact', locals: { contact: contact } %>
+  <% end %>
 <% end %>
