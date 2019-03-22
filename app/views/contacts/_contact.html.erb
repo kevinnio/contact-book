@@ -1,0 +1,28 @@
+<div class="box">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= contact.fullname %></strong>
+        </p>
+        <p>
+          <span class="icon"><i class="fa fa-phone"></i></span>
+          <span><%= contact.telephone %></span>
+        </p>
+        <p>
+          <span class="icon"><i class="fa fa-home"></i></span>
+          <span><%= contact.address %></span>
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item">
+            <a href="<%= edit_contact_path(contact) %>" class="icon is-small" title="Edit">
+              <i class="fas fa-edit"></i>
+            </a>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
