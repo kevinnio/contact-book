@@ -19,6 +19,8 @@ gem 'webpacker'
 # gem 'mini_racer', platforms: :ruby
 # Manages authentication, user registration and more!
 gem 'devise'
+# Adapter for Google Cloud Storage service
+gem "google-cloud-storage"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
