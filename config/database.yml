@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: contact-book_production
-  username: contact-book
-  password: <%= ENV['CONTACT-BOOK_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
